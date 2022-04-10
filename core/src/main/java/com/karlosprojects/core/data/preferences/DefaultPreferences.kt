@@ -80,7 +80,7 @@ class DefaultPreferences(
                     weight = weight,
                     age = age,
                     activityLevel = ActivityLevel.fromString(activityLevel ?: "medium"),
-            goalType = GoalType.fromString(goalType ?: "kepp_weight"),
+            goalType = GoalType.fromString(goalType ?: "keep_weight"),
             carbRatio = carbRatio,
             proteinRatio = proteinRatio,
             fatRatio = fatRatio,
