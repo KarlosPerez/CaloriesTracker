@@ -35,4 +35,5 @@ object AppModule {
     fun provideFilterOutDigitsUseCase(): FilterOutDigits {
         return FilterOutDigits()
     }
+
 }
