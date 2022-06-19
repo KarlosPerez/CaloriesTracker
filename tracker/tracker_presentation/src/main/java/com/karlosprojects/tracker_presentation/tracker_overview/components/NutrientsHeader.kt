@@ -68,47 +68,47 @@ fun NutrientsHeader(
                     unit = stringResource(id = R.string.kcal),
                     amountColor = MaterialTheme.colors.onPrimary,
                     amountTextSize = 40.sp,
-                    unitColor = MaterialTheme.colors.primary
+                    unitColor = MaterialTheme.colors.onPrimary,
                 )
             }
-            Spacer(modifier = Modifier.height(spacing.spaceSmall))
-            NutrientsBar(
-                carbs = state.totalCarbs,
-                protein = state.totalProtein,
-                fat = state.totalFat,
-                calories = state.totalCalories,
-                calorieGoal = state.caloriesGoal,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(30.dp)
+        }
+        Spacer(modifier = Modifier.height(spacing.spaceSmall))
+        NutrientsBar(
+            carbs = state.totalCarbs,
+            protein = state.totalProtein,
+            fat = state.totalFat,
+            calories = state.totalCalories,
+            calorieGoal = state.caloriesGoal,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(30.dp)
+        )
+        Spacer(modifier = Modifier.height(spacing.spaceLarge))
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            NutrientBarInfo(
+                value = state.totalCarbs,
+                goal = state.carbsGoal,
+                name = stringResource(id = R.string.carbs),
+                color = CarbColor,
+                modifier = Modifier.size(90.dp)
             )
-            Spacer(modifier = Modifier.height(spacing.spaceLarge))
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                NutrientBarInfo(
-                    value = state.totalCarbs,
-                    goal = state.carbsGoal,
-                    name = stringResource(id = R.string.carbs),
-                    color = CarbColor,
-                    modifier = Modifier.size(90.dp)
-                )
-                NutrientBarInfo(
-                    value = state.totalProtein,
-                    goal = state.proteinGoal,
-                    name = stringResource(id = R.string.protein),
-                    color = ProteinColor,
-                    modifier = Modifier.size(90.dp)
-                )
-                NutrientBarInfo(
-                    value = state.totalFat,
-                    goal = state.fatGoal,
-                    name = stringResource(id = R.string.fat),
-                    color = FatColor,
-                    modifier = Modifier.size(90.dp)
-                )
-            }
+            NutrientBarInfo(
+                value = state.totalProtein,
+                goal = state.proteinGoal,
+                name = stringResource(id = R.string.protein),
+                color = ProteinColor,
+                modifier = Modifier.size(90.dp)
+            )
+            NutrientBarInfo(
+                value = state.totalFat,
+                goal = state.fatGoal,
+                name = stringResource(id = R.string.fat),
+                color = FatColor,
+                modifier = Modifier.size(90.dp)
+            )
         }
     }
 }
