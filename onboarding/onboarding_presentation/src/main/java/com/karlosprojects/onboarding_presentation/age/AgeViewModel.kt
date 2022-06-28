@@ -8,7 +8,6 @@ import androidx.lifecycle.viewModelScope
 import com.karlosprojects.core.R
 import com.karlosprojects.core.domain.preferences.Preferences
 import com.karlosprojects.core.domain.use_case.FilterOutDigits
-import com.karlosprojects.core.navigation.Route
 import com.karlosprojects.core.util.UiEvent
 import com.karlosprojects.core.util.UiText
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -44,7 +43,7 @@ class AgeViewModel @Inject constructor(
                 return@launch
             }
             preferences.saveAge(ageNumber)
-            _uiEvent.send(UiEvent.Navigate(Route.HEIGHT))
+            _uiEvent.send(UiEvent.Success)
         }
     }
 }

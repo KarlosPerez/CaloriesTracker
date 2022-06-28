@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.karlosprojects.caloriestrackerapp">
 
     <application
         android:name=".CaloriesTrackerApp"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CaloriesTrackerApp">
+        android:theme="@style/Theme.CaloriesTrackerApp"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        tools:targetApi="s"
+        tools:ignore="DataExtractionRules">
         <activity
             android:name="com.karlosprojects.caloriestrackerapp.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.CaloriesTrackerApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

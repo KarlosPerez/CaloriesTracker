@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.karlosprojects.core.domain.preferences.Preferences
 import com.karlosprojects.core.domain.use_case.FilterOutDigits
-import com.karlosprojects.core.navigation.Route
 import com.karlosprojects.core.util.UiEvent
 import com.karlosprojects.onboarding_domain.use_case.ValidateNutrients
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -57,7 +56,7 @@ class NutrientGoalViewModel @Inject constructor(
                         preferences.saveProteinRatio(result.proteinRatio)
                         preferences.saveCarbRatio(result.carbsRatio)
                         viewModelScope.launch {
-                            _uiEvent.send(UiEvent.Navigate(Route.TRACKER_OVERVIEW))
+                            _uiEvent.send(UiEvent.Success)
                         }
                     }
                 }

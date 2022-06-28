@@ -21,7 +21,7 @@ import kotlinx.coroutines.flow.collect
 @Composable
 fun AgeScreen(
     scaffoldState: ScaffoldState,
-    onNavigate: (UiEvent.Navigate) -> Unit,
+    onNextClick: () -> Unit,
     ageViewModel: AgeViewModel = hiltViewModel()
 ) {
     val spacing = LocalSpacing.current
@@ -29,7 +29,7 @@ fun AgeScreen(
     LaunchedEffect(key1 = true) {
         ageViewModel.uiEvent.collect { event ->
             when (event) {
-                is UiEvent.Navigate -> onNavigate(event)
+                is UiEvent.Success -> onNextClick()
                 is UiEvent.ShowSnackBar -> {
                     scaffoldState.snackbarHostState.showSnackbar(
                         message = event.message.asString(context = context)

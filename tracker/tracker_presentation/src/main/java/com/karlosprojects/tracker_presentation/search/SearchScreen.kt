@@ -43,7 +43,7 @@ fun SearchScreen(
     LaunchedEffect(key1 = keyboardController) {
         viewModel.uiEvent.collect { event ->
             when (event) {
-                is UiEvent.Navigate -> Unit
+                is UiEvent.Success -> Unit
                 UiEvent.NavigateUp -> onNavigateUp()
                 is UiEvent.ShowSnackBar -> {
                     scaffoldState.snackbarHostState.showSnackbar(
