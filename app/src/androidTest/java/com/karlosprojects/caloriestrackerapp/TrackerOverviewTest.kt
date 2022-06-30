@@ -1,6 +1,5 @@
 package com.karlosprojects.caloriestrackerapp
 
-import android.os.SystemClock
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Scaffold
 import androidx.compose.material.rememberScaffoldState
@@ -231,7 +230,6 @@ class TrackerOverviewTest {
             .onAllNodesWithText(expectedFat.toStr())
             .onFirst()
             .assertIsDisplayed()
-        SystemClock.sleep(20000)
         composeRule
             .onAllNodesWithText(expectedCarbs.toStr())
             .onFirst()
