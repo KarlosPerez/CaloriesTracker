@@ -4,7 +4,7 @@ Calories tracker app that shows a list of tracking meals to monitor daily calori
 
 ## Purpose
 
-This is created just for practice, following a tutorial; This is my first multimodule app using kotlin KTS and jetpack compose.
+This is created just for practice, following a tutorial; This is my first multimodule app using KTS and jetpack compose.
 
 ### What you can find in this project
 
@@ -16,3 +16,8 @@ This is a full featured app, it loads the daily calorie intake, so user can keep
 * Jetpack Compose
 * Compose UI Test
 * MockWebServer
+* Kotlin Scripting (KTS)
+
+![preview](https://github.com/KarlosPerez/CaloriesTracker/blob/master/compose_preview1.png)
+![preview](https://github.com/KarlosPerez/CaloriesTracker/blob/master/compose_preview2.png)
+![preview](https://github.com/KarlosPerez/CaloriesTracker/blob/master/compose_preview3.png)
