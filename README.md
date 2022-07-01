@@ -11,6 +11,7 @@ This is created just for practice, following a tutorial; This is my first multim
 This is a full featured app, it loads the daily calorie intake, so user can keep track of the calorie goal. Begins with an onboarding screen to setup user values and goals, and then shows a dashboard when user can select and add meal. It uses OpenFoodAPI to search food feature: This app uses the following:
 
 * Retrofit
+* Room
 * Hilt
 * Flow
 * Jetpack Compose
